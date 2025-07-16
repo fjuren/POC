@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Tokens POC - HTML Demo</title>
+    <link rel="stylesheet" href="../build/css/tokens.css" />
+    <link rel="stylesheet" href="../build/css/light-theme.css" />
+    <link rel="stylesheet" href="../build/css/dark-theme.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          sans-serif;
+        background-color: var(--color-background);
+        color: var(--color-text);
+        transition: background-color 0.3s ease, color 0.3s ease;
+        padding: 2rem;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .header h1 {
+        color: var(--color-primary);
+        margin-bottom: 1rem;
+      }
+
+      .theme-toggle {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: 2px solid var(--color-primary);
+        color: var(--color-primary);
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+
+      .theme-toggle:hover {
+        background-color: var(--color-primary);
+        color: var(--color-background);
+      }
+
+      .demo-section {
+        margin-bottom: 3rem;
+      }
+
+      .demo-section h2 {
+        margin-bottom: 1.5rem;
+        color: var(--color-text);
+      }
+
+      .button-group {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+
+      .btn {
+        padding: var(--spacing-md) var(--spacing-lg);
+        border: none;
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .btn-primary {
+        background-color: var(--color-primary);
+        color: var(--color-background);
+      }
+
+      .btn-primary:hover {
+        background-color: var(--color-primary-hover, var(--color-primary));
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-secondary {
+        background-color: var(--color-secondary);
+        color: var(--color-background);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--color-secondary-hover, var(--color-secondary));
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        color: var(--color-primary);
+        border: 2px solid var(--color-primary);
+      }
+
+      .btn-outline:hover {
+        background-color: var(--color-primary);
+        color: var(--color-background);
+      }
+
+      .card {
+        background-color: var(--color-surface, var(--color-background));
+        border: 1px solid var(--color-border, #e0e0e0);
+        border-radius: var(--border-radius);
+        padding: var(--spacing-lg);
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .token-showcase {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .token-item {
+        background-color: var(--color-surface, var(--color-background));
+        padding: var(--spacing-md);
+        border-radius: var(--border-radius);
+        border: 1px solid var(--color-border, #e0e0e0);
+        text-align: center;
+      }
+
+      .color-swatch {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin: 0 auto 1rem;
+        border: 2px solid var(--color-border, #e0e0e0);
+      }
+
+      .swatch-primary {
+        background-color: var(--color-primary);
+      }
+      .swatch-secondary {
+        background-color: var(--color-secondary);
+      }
+      .swatch-text {
+        background-color: var(--color-text);
+      }
+      .swatch-background {
+        background-color: var(--color-background);
+      }
+
+      .code {
+        background-color: var(--color-surface, #f5f5f5);
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+      }
+
+      @media (max-width: 600px) {
+        .button-group {
+          flex-direction: column;
+        }
+
+        .token-showcase {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body data-theme="light">
+    <button class="theme-toggle" id="themeToggle">🌓 Toggle Theme</button>
+
+    <div class="container">
+      <div class="header">
+        <h1>Design Tokens POC</h1>
+        <p>Demonstrating Tokens Studio → GitHub → CSS workflow</p>
+      </div>
+
+      <div class="demo-section">
+        <h2>Button Components</h2>
+        <div class="button-group">
+          <button class="btn btn-primary">Primary Button</button>
+          <button class="btn btn-secondary">Secondary Button</button>
+          <button class="btn btn-outline">Outline Button</button>
+        </div>
+      </div>
+
+      <div class="demo-section">
+        <h2>Card Component</h2>
+        <div class="card">
+          <h3>Example Card</h3>
+          <p>
+            This card uses design tokens for spacing, colors, and border radius.
+            The theme switching affects all these properties automatically.
+          </p>
+          <button class="btn btn-primary" style="margin-top: 1rem">
+            Card Action
+          </button>
+        </div>
+      </div>
+
+      <div class="demo-section">
+        <h2>Token Showcase</h2>
+        <div class="token-showcase">
+          <div class="token-item">
+            <div class="color-swatch swatch-primary"></div>
+            <h4>Primary Color</h4>
+            <div class="code">var(--color-primary)</div>
+          </div>
+          <div class="token-item">
+            <div class="color-swatch swatch-secondary"></div>
+            <h4>Secondary Color</h4>
+            <div class="code">var(--color-secondary)</div>
+          </div>
+          <div class="token-item">
+            <div class="color-swatch swatch-text"></div>
+            <h4>Text Color</h4>
+            <div class="code">var(--color-text)</div>
+          </div>
+          <div class="token-item">
+            <div class="color-swatch swatch-background"></div>
+            <h4>Background</h4>
+            <div class="code">var(--color-background)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Theme toggle functionality
+      const themeToggle = document.getElementById('themeToggle');
+      const body = document.body;
+
+      let currentTheme = 'light';
+
+      themeToggle.addEventListener('click', () => {
+        currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+        body.setAttribute('data-theme', currentTheme);
+
+        // Update button text
+        themeToggle.textContent =
+          currentTheme === 'light' ? '🌓 Toggle Theme' : '☀️ Toggle Theme';
+      });
+
+      // Simple demo of token values (could be useful for debugging)
+      console.log('Design Tokens Demo loaded');
+      console.log('Current theme:', currentTheme);
+    </script>
+  </body>
+</html>

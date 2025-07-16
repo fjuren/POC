@@ -1661,12 +1661,6 @@
   },
   "$themes": [],
   "$metadata": {
-    "tokenSetOrder": [
-      "core",
-      "light",
-      "dark",
-      "theme",
-      "TSBC POC"
-    ]
+    "tokenSetOrder": ["core", "light", "dark", "theme", "TSBC POC"]
   }
 }
