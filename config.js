@@ -9,6 +9,7 @@ register(StyleDictionary);
 
 const sd = new StyleDictionary({
   source: ['tokens/**/*.json'],
+  excludeParentKeys: true, // <-- helpful if multiple sets are present / included in json sync
   preprocessors: ['tokens-studio'], // <-- since 0.16.0 this must be explicit
   expand: {
     typesMap: expandTypesMap, // <-- handles token studio sets (sets allow for things like themeing)
