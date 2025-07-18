@@ -124,7 +124,7 @@ h3 {
   background-color: var(--status-color-active);
 }
 .chip-warning {
-  background-color: var(--status-color-yellow);
+  background-color: var(--status-color-yellow-demo);
 }
 .chip-danger {
   background-color: var(--status-color-red);
@@ -161,11 +161,11 @@ h3 {
   border: 1px solid #1b2d51;
 }
 .btn-secondary:hover {
-  background-color: var(--primary-light);
+  background-color: var(--primary-light-demo);
   box-shadow: var(--elevation-2);
 }
 .btn-secondary:active {
-  background-color: var(--primary-light);
+  background-color: var(--primary-light-demo);
   box-shadow: none;
 }
 

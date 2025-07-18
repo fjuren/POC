@@ -76,7 +76,7 @@ h2 {
 
 /* Primary button */
 .btn-primary {
-  background-color: var(--primary-dark);
+  background-color: var(--primary-dark-demo);
   color: var(--white);
 }
 .btn-primary:hover {
@@ -99,11 +99,11 @@ h2 {
   border: 1px solid var(--primary-dark);
 }
 .btn-secondary:hover {
-  background-color: var(--primary-light);
+  background-color: var(--primary-light-demo);
   box-shadow: var(--elevation-2);
 }
 .btn-secondary:active {
-  background-color: var(--primary-light);
+  background-color: var(--primary-light-demo);
   box-shadow: none;
 }
 .btn-secondary:disabled {
@@ -135,7 +135,7 @@ h2 {
   background-color: var(--status-color-active);
 }
 .chip-warning {
-  background-color: var(--status-color-yellow);
+  background-color: var(--status-color-yellow-demo);
 }
 .chip-danger {
   background-color: var(--status-color-red);

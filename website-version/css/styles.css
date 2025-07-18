@@ -185,7 +185,7 @@ h3 {
 }
 
 .btn-primary {
-  background-color: var(--primary-dark);
+  background-color: var(--primary-dark-demo);
   color: var(--white);
 }
 
@@ -212,21 +212,9 @@ h3 {
   border: 1px solid #1b2d51;
 }
 
-.btn-secondary:hover:not(:disabled) {
-  background-color: var(--primary-light);
-  box-shadow: var(--elevation-2);
-}
-
-.btn-secondary:active {
-  background-color: var(--primary-light);
+.btn-secondary:hover {
+  background-color: var(--primary-light-demo);
   box-shadow: none;
-}
-
-.btn-secondary:disabled {
-  background-color: var(--white);
-  /* border: 2px solid var(--primary-dark); */
-  border: 2px solid #1b2d51;
-  opacity: 0.4;
 }
 
 /* Responsive Design */
