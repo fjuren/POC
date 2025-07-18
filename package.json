@@ -5,6 +5,7 @@
   "description": "POC demonstrating Tokens Studio to code workflow",
   "scripts": {
     "build:tokens": "style-dictionary build",
+    "watch:tokens": "style-dictionary build --watch",
     "build:react": "cd react-demo && npm run build",
     "dev:react": "cd react-demo && npm start",
     "serve:html": "npx serve html-demo",
@@ -21,5 +22,5 @@
     "figma",
     "design-system"
   ],
-  "author": "Fabian Juren"
+  "author": ""
 }
