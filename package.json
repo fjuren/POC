@@ -6,10 +6,9 @@
   "scripts": {
     "build:tokens": "style-dictionary build",
     "watch:tokens": "style-dictionary build --watch",
-    "build:react": "cd react-demo && npm run build",
-    "dev:react": "cd react-demo && npm start",
     "serve:html": "npx serve html-demo",
-    "setup": "npm install && cd react-demo && npm install"
+    "serve:website": "npx serve website-version",
+    "serve:portal": "npx serve portal-version"
   },
   "devDependencies": {
     "@tokens-studio/sd-transforms": "^1.3.0",
@@ -22,5 +21,5 @@
     "figma",
     "design-system"
   ],
-  "author": ""
+  "author": "Fabian Juren"
 }

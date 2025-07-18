@@ -43,11 +43,23 @@ const sd = new StyleDictionary({
         },
       ],
     },
-    // For React demo
-    'css-react-demo': {
+    // For website demo
+    'website-version': {
       transformGroup: 'tokens-studio',
       transforms: ['name/kebab'],
-      buildPath: 'react-demo/src/styles/',
+      buildPath: 'website-version/css/',
+      files: [
+        {
+          destination: 'tokens.css',
+          format: 'css/variables',
+        },
+      ],
+    },
+    // For portal demo
+    'portal-version': {
+      transformGroup: 'tokens-studio',
+      transforms: ['name/kebab'],
+      buildPath: 'portal-version/css/',
       files: [
         {
           destination: 'tokens.css',
