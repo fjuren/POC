@@ -577,17 +577,17 @@
       }
     },
     "Primary Dark - DEMO": {
-      "value": "#1b2d51",
+      "value": "#eb1de7",
       "type": "color",
       "description": "Token POC Demo"
     },
     "Status Color - Yellow DEMO": {
-      "value": "#fabf1d",
+      "value": "#1479fd",
       "type": "color",
       "description": "Token POC"
     },
     "Primary Light - DEMO": {
-      "value": "#e5eef2",
+      "value": "#1cf400",
       "type": "color",
       "description": "Token POC"
     }
