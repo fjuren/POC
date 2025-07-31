@@ -204,9 +204,9 @@
   --font-sizes-body: 16px;
   --font-sizes-sm: 13.6px;
   --font-sizes-xs: 10.4px;
-  --primary-dark-demo: #1b2d51; /** Token POC Demo */
-  --status-color-yellow-demo: #fabf1d; /** Token POC */
-  --primary-light-demo: #e5eef2; /** Token POC */
+  --primary-dark-demo: #f42a88; /** Token POC Demo */
+  --status-color-yellow-demo: #1de4fa; /** Token POC */
+  --primary-light-demo: #05fa3a; /** Token POC */
   --fg-default: #ffffff;
   --fg-muted: #e2e8f0;
   --fg-subtle: #a0aec0;
